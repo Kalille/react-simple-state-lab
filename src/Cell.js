@@ -6,15 +6,20 @@ constructor(props){
     this.state={
         color: props.value
     }
-
+}
+handleClick=()=>{
+     this.setState({
+        color: '#333'
+    })
+}
     render(){
         return(
-            <div className='cell' onClick={Cell} style={{backgroundColor: '#FFF'}}>
+            <div className='cell' onClick={this.handleClick} style={{backgroundColor: this.state.color}}>
 
             </div>
         )
     }
-
+   
 }
 
-}
+
